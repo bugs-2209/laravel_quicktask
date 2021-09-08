@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
-    Route::get('/', 'CategoryController@index')->name('index');
+Route::group(['middleware' => 'locale'], function (){
+    Route::get('/', 'HomeController@dashboard');
+    Route::get('change-language/{language}', 'HomeController@changeLanguage')->name('change-language');
+    
+    //Route CategoryController
+    Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
+        Route::get('/', 'CategoryController@index')->name('index');
+    });
 });
