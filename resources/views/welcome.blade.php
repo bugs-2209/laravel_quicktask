@@ -1,100 +1,158 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+      <!--     Fonts and icons     -->
+      <link href="{{ asset('css/bootstrap.css')}}" rel="stylesheet" />
+      <link href="{{ asset('css/light-bootstrap-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
+      <!-- CSS Just for demo purpose, don't include it in your project -->
+      <link href="{{ asset('css/demo.css')}}" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+               <!--
+                  Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+                  
+                  Tip 2: you can also add an image using data-image tag
+                  -->
+               <div class="sidebar-wrapper">
+                  <div class="logo">
+                     <a href="http://www.creative-tim.com" class="simple-text">
+                     Creative Tim
+                     </a>
+                  </div>
+                  <ul class="nav">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                           <p>Dashboard</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="nav-link" href="{{ route('category.index') }}">
+                           <p>Category</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="nav-link" href="#">
+                           <p>Product</p>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+         </div>
+         <div class="main-panel">
+               <!-- Navbar -->
+               <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                  <div class="container-fluid">
+                     <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-bar burger-lines"></span>
+                     <span class="navbar-toggler-bar burger-lines"></span>
+                     <span class="navbar-toggler-bar burger-lines"></span>
+                     </button>
+                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                           <ul class="nav navbar-nav mr-auto">
+                              <li class="nav-item">
+                                 <a href="#" class="nav-link" data-toggle="dropdown">
+                                 <i class="nc-icon nc-palette"></i>
+                                 <span class="d-lg-none">Dashboard</span>
+                                 </a>
+                              </li>
+                              <li class="dropdown nav-item">
+                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                 <i class="nc-icon nc-planet"></i>
+                                 <span class="notification">5</span>
+                                 <span class="d-lg-none">Notification</span>
+                                 </a>
+                                 <ul class="dropdown-menu">
+                                       <a class="dropdown-item" href="#">Notification 1</a>
+                                       <a class="dropdown-item" href="#">Notification 2</a>
+                                       <a class="dropdown-item" href="#">Notification 3</a>
+                                       <a class="dropdown-item" href="#">Notification 4</a>
+                                       <a class="dropdown-item" href="#">Another notification</a>
+                                 </ul>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#" class="nav-link">
+                                 <i class="nc-icon nc-zoom-split"></i>
+                                 <span class="d-lg-block">&nbsp;Search</span>
+                                 </a>
+                              </li>
+                           </ul>
+                           <ul class="navbar-nav ml-auto">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#pablo">
+                                 <span class="no-icon">Account</span>
+                                 </a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <span class="no-icon">Dropdown</span>
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                       <a class="dropdown-item" href="#">Action</a>
+                                       <a class="dropdown-item" href="#">Another action</a>
+                                       <a class="dropdown-item" href="#">Something</a>
+                                       <a class="dropdown-item" href="#">Something else here</a>
+                                       <div class="divider"></div>
+                                       <a class="dropdown-item" href="#">Separated link</a>
+                                 </div>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#pablo">
+                                 <span class="no-icon">Log out</span>
+                                 </a>
+                              </li>
+                           </ul>
+                     </div>
+                  </div>
+               </nav>
+               <!-- End Navbar -->
+               <div class="content">
+                  <div class="container-fluid">
+                     @yield('content')
+                  </div>
+               </div>
+               <footer class="footer">
+                  <div class="container-fluid">
+                     <nav>
+                           <ul class="footer-menu">
+                              <li>
+                                 <a href="#">
+                                 Home
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                 Company
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                 Portfolio
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                 Blog
+                                 </a>
+                              </li>
+                           </ul>
+                           <p class="copyright text-center">
+                              ©
+                              <script>
+                                 document.write(new Date().getFullYear())
+                              </script>
+                              <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                           </p>
+                     </nav>
+                  </div>
+               </footer>
+         </div>
+      </div>
+   </body>
 </html>
