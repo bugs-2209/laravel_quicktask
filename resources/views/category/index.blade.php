@@ -3,10 +3,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">STT</th>
-                <th scope="col">Name</th>
-                <th scope="col">Status</th>
-                <th scope="col">Action</th>
+                <th scope="col">{{ __('quicktask.colums.stt') }}</th>
+                <th scope="col">{{ __('quicktask.colums.category_name') }}</th>
+                <th scope="col">{{ __('quicktask.colums.status') }}</th>
+                <th scope="col">{{ __('quicktask.colums.action') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -15,11 +15,11 @@
                 <td>Cate1</td>
                 <td>Onl</td>
                 <td>
-                    <a href="#"class="btn btn-primary">Edit</a>
+                    <a href="#"class="btn btn-primary">{{ __('action.edit') }}</a>
                 </td>
                 <td>
                     <form action="#" method="post">
-                        <button type="submit" class="btn btn-danger">Delete</button> 
+                        <button type="submit" class="btn btn-danger">{{ __('action.delete') }}</button> 
                     </form>
                 </td>
             </tr>
