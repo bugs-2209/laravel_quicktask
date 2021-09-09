@@ -15,4 +15,20 @@ return [
         'qty' => 'Số lượng',
         'action' => 'Tác vụ',
     ],
+    'status' => [
+        'active' => 'Hoạt động',
+        'deactive' => 'Vô hiệu hóa',
+    ],
+    'notification' => [
+        'category' => [
+            'create' => 'Thêm danh mục thành công',
+            'update' => 'Sửa danh mục thành công',
+            'delete' => 'Xóa danh mục thành công',
+        ],
+    ],
+    'validate' => [
+        'category' => [
+            'name' => 'Vui lòng không để trống tên',
+        ],
+    ]
 ];
