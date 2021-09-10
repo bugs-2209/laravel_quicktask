@@ -15,4 +15,20 @@ return [
         'qty' => 'Quantity',
         'action' => 'Action',
     ],
+    'status' => [
+        'active' => 'Active',
+        'deactive' => 'Deactive',
+    ],
+    'notification' => [
+        'category' => [
+            'create' => 'Create Category Success',
+            'update' => 'Update Category Success',
+            'delete' => 'Delete Category Success',
+        ],
+    ],
+    'validate' => [
+        'category' => [
+            'name' => 'The name is required.',
+        ],
+    ]
 ];
