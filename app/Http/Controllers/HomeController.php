@@ -19,6 +19,7 @@ class HomeController extends Controller
             abort(404);
         }
         Session::put('language', $lang);
+        
         return redirect()->back();
     }
 }
