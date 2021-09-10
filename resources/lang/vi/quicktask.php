@@ -37,6 +37,17 @@ return [
         ],
         'product' => [
             'name' => 'Vui lòng không để trống tên.',
+            'category' => 'Vui lòng không để trống danh mục.',
+            'description' => 'Vui lòng không để trống mô tả.',
+            'qty_rq' => 'Vui lòng không để trống số lượng.',
+            'qty_min' => 'Số lượng không nhỏ hơn 0.',
         ],
-    ]
+    ],
+    'label' => [
+        'name' => 'Tên',
+        'status' => 'Trạng thái',
+        'category' => 'Danh mục',
+        'description' => 'Mô tả',
+        'qty' => 'Số lượng',
+    ],
 ];

@@ -14,6 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
+
         return view('category.index', compact('categories'));
     }
 
@@ -37,12 +38,14 @@ class CategoryController extends Controller
             $cate->status = $status,
         ];
         $cate->save($data);
+
         return redirect()->route('category.index')->with('notification', trans('quicktask.notification.category.create'));
     }
 
     public function edit($id)
     {
         $category = Category::find($id);
+
         return view('category.edit', compact('category'));
     }
 
@@ -60,12 +63,16 @@ class CategoryController extends Controller
             'status' => $status,
         ];
         Category::where('id', $id)->update($data);
+
         return redirect()->route('category.index')->with('notification', trans('quicktask.notification.category.update'));
     }
 
     public function delete($id)
     {
-        Category::where('id', $id)->delete();
+        $cate = Category::where('id', $id)->first();
+        $cate->delete();
+        $cate->product()->detach();
+        
         return redirect()->route('category.index')->with('notification', trans('quicktask.notification.category.delete'));
     }
 }
