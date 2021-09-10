@@ -25,10 +25,18 @@ return [
             'update' => 'Sửa danh mục thành công',
             'delete' => 'Xóa danh mục thành công',
         ],
+        'product' => [
+            'create' => 'Thêm sản phẩm thành công',
+            'update' => 'Sửa sản phẩm thành công',
+            'delete' => 'Xóa sản phẩm thành công',
+        ],
     ],
     'validate' => [
         'category' => [
             'name' => 'Vui lòng không để trống tên',
+        ],
+        'product' => [
+            'name' => 'Vui lòng không để trống tên.',
         ],
     ]
 ];

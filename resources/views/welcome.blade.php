@@ -37,7 +37,7 @@
                      </a>
                   </li>
                   <li>
-                     <a class="nav-link" href="#">
+                     <a class="nav-link" href="{{ route('product.index') }}">
                         <p>{{ __('sidebar.product_list') }}</p>
                      </a>
                   </li>
@@ -66,4 +66,5 @@
          </div>
       </div>
    </body>
+   <script src="{{ asset('js/select2.js') }}"></script>
 </html>
