@@ -9,6 +9,9 @@ class Product extends Model
 {
     use SoftDeletes;
 
+    const PRODUCT_ONL = 1;
+    const PRODUCT_OFF = 0;
+    
     protected $fillable = [
         'name',
         'slug',
@@ -18,6 +21,6 @@ class Product extends Model
 
     public function categories()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsToMany(Category::class,'category_products');
     }
 }

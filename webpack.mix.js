@@ -13,4 +13,5 @@ const mix = require('laravel-mix');
 
 mix.sass('resources/sass/light-bootstrap-dashboard.scss', 'public/css')
     .sass('resources/sass/bootstrap.scss', 'public/css')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .js('resources/js/select2.js', 'public/js');

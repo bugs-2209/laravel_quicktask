@@ -26,4 +26,11 @@ Route::group(['middleware' => 'locale'], function (){
         Route::post('/update/{id}', 'CategoryController@update')->name('update');
         Route::post('/delete/{id}', 'CategoryController@delete')->name('delete');
     });
+
+    //Route ProductController
+    Route::group(['prefix' => 'product', 'as' => 'product.'], function () {
+        Route::get('/', 'ProductController@index')->name('index');
+        Route::get('/create', 'ProductController@create')->name('create');
+        Route::post('/store', 'ProductController@store')->name('store');
+    });
 });

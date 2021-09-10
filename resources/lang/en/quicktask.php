@@ -25,9 +25,17 @@ return [
             'update' => 'Update Category Success',
             'delete' => 'Delete Category Success',
         ],
+        'product' => [
+            'create' => 'Create Product Success',
+            'update' => 'Update Product Success',
+            'delete' => 'Delete Product Success',
+        ],
     ],
     'validate' => [
         'category' => [
+            'name' => 'The name is required.',
+        ],
+        'product' => [
             'name' => 'The name is required.',
         ],
     ]
